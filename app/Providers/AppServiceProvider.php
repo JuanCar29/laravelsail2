@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Policies\ReciboPolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Schema;
 use App\Models\Preferencia;
 
 class AppServiceProvider extends ServiceProvider
@@ -34,7 +35,8 @@ class AppServiceProvider extends ServiceProvider
            return $user->tieneNivel(1,3);
        });
 
-       View::share('miBar', Preferencia::first());
-
+       if (!app()->runningInConsole() && Schema::hasTable('preferencias')) {
+            View::share('miBar', Preferencia::first());
+       }
     }
 }

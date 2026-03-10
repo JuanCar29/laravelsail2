@@ -52,8 +52,10 @@
             <div
                 class="bg-[#fff2f2] dark:bg-[#1D0002] relative lg:-ms-px -mb-px lg:mb-0 rounded-t-lg lg:rounded-t-none lg:rounded-e-lg! aspect-[335/376] lg:aspect-auto w-full lg:w-[438px] shrink-0 overflow-hidden flex items-center justify-center p-12">
 
-                <img src="{{ asset('storage/' . $miBar->logo) }}" alt="Logo"
-                    class="max-w-full max-h-full w-auto h-auto object-contain drop-shadow-md">
+                @if($miBar)
+                    <img src="{{ asset('storage/' . $miBar->logo) }}" alt="Logo"
+                        class="max-w-full max-h-full w-auto h-auto object-contain drop-shadow-md">
+                @endif
 
                 <div
                     class="absolute inset-0 pointer-events-none rounded-t-lg lg:rounded-t-none lg:rounded-e-lg shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d]">

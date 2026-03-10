@@ -5,9 +5,11 @@
 
             <div class="flex flex-col h-full w-full items-center justify-center p-8">
                 <div class="mb-8 flex items-center justify-center p-4 rounded-full bg-neutral-50 dark:bg-neutral-800 shadow-inner">
-                    <img src="{{ asset('storage/' . $miBar->logo) }}" 
-                        alt="Logo" 
-                        class="w-64 h-64 object-contain drop-shadow-md">
+                    @if($miBar)
+                        <img src="{{ asset('storage/' . $miBar->logo) }}" 
+                            alt="Logo" 
+                            class="w-64 h-64 object-contain drop-shadow-md">
+                    @endif
                 </div>
 
                 <div class="text-center">
