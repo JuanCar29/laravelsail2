@@ -55,7 +55,6 @@
 
         <flux:input type="number" min="0" wire:model="orden" label="Orden (opcional)" placeholder="1, 2, 3..."
             description="Determina la posición en el menú" />
-        <flux:input type="file" wire:model="imagen" label="Imagen del producto" />
 
         <div class="flex flex-wrap gap-4">
             <flux:button wire:click="save" class="cursor-pointer" size="sm" variant="primary">
